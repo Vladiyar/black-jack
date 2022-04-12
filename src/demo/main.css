@@ -1,0 +1,217 @@
+.open-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  background-color: rgba(50, 95, 50, 0.9);
+  color: #fff;
+  font-size: 5.3em;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  z-index: 1;
+}
+
+.open-window .play-again {
+  width: 200px;
+  height: 100px;
+  margin-top: 300px;
+  font-size: 0.5em;
+  border: 5px solid red;
+}
+
+.open-window .play-again:hover {
+  background: #6a00ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.module-window {
+  display: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .game-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .container .game-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+}
+
+.container .game-area .player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ccc;
+  height: 300px;
+  width: 500px;
+  margin: 20px;
+  color: #000;
+  font-size: 3em;
+  border: 5px solid #575757;
+}
+
+@media only screen and (max-width: 800px) {
+  .container .game-area .player {
+    width: 200px;
+    font-size: 30px;
+  }
+}
+
+.container .game-area .player .player-name {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-left: -90px;
+}
+
+.container .game-area .player .player-hand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  .container .game-area .player .player-hand {
+    width: 200px;
+  }
+}
+
+.container .game-area .player .player-hand .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 100px;
+  width: 75px;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.container .game-area .player .player-hand .card :first-child {
+  margin-right: 40px;
+}
+
+.container .game-area .player .player-hand .card :last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 40px;
+}
+
+.container .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: 98%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 5px solid green;
+}
+
+@media only screen and (max-width: 800px) {
+  .container .sidebar {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    border: none;
+    right: 20px;
+  }
+}
+
+.container .sidebar .card-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  width: 150px;
+  background-image: url("../images/card-back.png");
+  background-size: cover;
+}
+
+.container .sidebar .button {
+  height: 30px;
+  width: 150px;
+}
+
+.container .sidebar button:first-of-type {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
