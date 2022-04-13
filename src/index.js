@@ -87,9 +87,6 @@ function addCard () {
 
     }
 
-    // document.getElementById('card-suit-top'+g.gameState).innerText = gameCardSuits[g.players[g.gameState].cardsArray[g.players[g.gameState].cardsArray.length-1][0]];
-    // document.getElementById('card-value'+g.gameState).innerText = g.players[g.gameState].cardsArray[g.players[g.gameState].cardsArray.length-1][2] ? g.players[g.gameState].cardsArray[g.players[g.gameState].cardsArray.length-1][2] : g.players[g.gameState].cardsArray[g.players[g.gameState].cardsArray.length-1][1];
-    // document.getElementById('card-suit-bottom'+g.gameState).innerText = gameCardSuits[g.players[g.gameState].cardsArray[g.players[g.gameState].cardsArray.length-1][0]];
     if (!g.players[g.gameState].isCanDraw) {
         g.players[g.gameState].isPlayerDraw = false;
         const element = document.getElementById("player-" + g.gameState);
@@ -119,7 +116,7 @@ function nextPlayer() {
 }
 
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < g.players.length; i++) {
     addCard();
     addCard();
     nextPlayer();
